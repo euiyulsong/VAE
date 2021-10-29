@@ -115,7 +115,7 @@ class Decoder(nn.Module):
         ##################################### 
         # Write your code here
         ##################################### 
-        x_recon = (self.x_recon(self.h(z)))
+        x_recon = (self.x_recon((self.h(z))))
         return x_recon
 
 """<a name="reparam"></a>
@@ -134,9 +134,10 @@ class VAE(nn.Module):
     def reparameterize(self, mu, logvar):
         ##################################### 
         # Write your code here
-        eps = torch.randn_like(torch.exp(0.5*logvar))
+        std = torch.exp(0.5*logvar)
+        eps = torch.randn_like(stdw)
 
-        z = mu + eps * logvar
+        z = mu + eps * std
         ##################################### 
 
         return z
@@ -290,3 +291,4 @@ plt.yticks(fontsize=15)
 
 plt.savefig('latent_space.png')
 plt.show()
+

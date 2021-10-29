@@ -10,8 +10,8 @@ Thereby, I increased the model's epoch to 200. As a result, the model produced l
 Lastly, I increased the model's epoch to 500 in order to prevent underfitting. I also refined e_hidden and d_hidden to 256 so as to prevent overfitting. The result as a success that I was able to observe few misclassifications.
 
 ## 5 Reconstruction images per each class.
-![](img/3.png)
+![](img/5.png)
 
 ## Visualization of the 2D latent space.
 
-![](img/4.png)
+![](img/6.png)
